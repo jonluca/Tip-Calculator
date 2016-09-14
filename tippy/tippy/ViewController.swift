@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
 
+    @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
@@ -20,7 +21,7 @@ class ViewController: UIViewController {
     }
 
     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()s
+        super.didReceiveMemoryWarning();
         // Dispose of any resources that can be recreated.
     }
 
@@ -30,7 +31,7 @@ class ViewController: UIViewController {
     @IBAction func calculateTip(sender: AnyObject) {
         let tipPercentages = [0.18,0.2,0.25];
         let bill = Double(billField.text!) ?? 0
-        let tip = bill * 0.2
+        let tip = bill * tipPercentages[tipControl.selectedSegmentIndex];
         let total = bill + tip
         
         

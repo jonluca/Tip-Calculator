@@ -61,6 +61,9 @@
                                     <segment title="20%"/>
                                     <segment title="25%"/>
                                 </segments>
+                                <connections>
+                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="vVe-yb-EKc"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="Jdi-Ix-HHp">
                                 <rect key="frame" x="113" y="98" width="187" height="30"/>
@@ -81,6 +84,7 @@
                     <navigationItem key="navigationItem" title="Tip Calculator" id="0mg-0e-S49"/>
                     <connections>
                         <outlet property="billField" destination="Jdi-Ix-HHp" id="i0e-n6-X5D"/>
+                        <outlet property="tipControl" destination="K4A-6T-s9l" id="IOC-dH-UaM"/>
                         <outlet property="tipLabel" destination="LGB-Vj-uzZ" id="qGp-aP-C0V"/>
                         <outlet property="totalLabel" destination="vw2-kD-QbC" id="L8I-Kh-pRy"/>
                     </connections>
